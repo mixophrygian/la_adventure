@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <h1 class="title">L.A. Adventures</h1>
-
+<div class="container">
 <table>
   <thead>
     <tr>
@@ -24,7 +24,9 @@
     <% end %>
   </tbody>
 </table>
+<%= link_to 'Add Adventure', new_adventure_path, class: 'adventure-link' %>
+</div>
 
 <br>
 
-<%= link_to 'Add Adventure', new_adventure_path, class: 'adventure-link' %>
+

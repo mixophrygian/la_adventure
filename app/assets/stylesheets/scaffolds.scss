@@ -26,12 +26,22 @@
     margin: 0 auto;
   }
 
-  .adventure-link {
+  .container .adventure-link {
     text-align: center;
     display: block;
     margin: 0 auto;
+    margin-top: 20px;
   }
 
+  .description {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .links {
+    margin: 0 auto;
+    text-align: right;
+  }
   tr {
     td:first-child {
       font-size: 24px;
