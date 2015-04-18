@@ -15,10 +15,9 @@
   <tbody>
     <% @adventures.each do |adventure| %>
       <tr>
-        <td><%= adventure.name %></td>
-        <td><%= truncate(adventure.description, length: 40) %></td>
+        <td><%= link_to adventure.name, adventure %></td>
+        <td><%= link_to truncate(adventure.description, length: 40), adventure %></td>
         <td><%= adventure.visit %></td>
-        <td><%= link_to 'See More', adventure %></td>
         <td><%= link_to 'Edit', edit_adventure_path(adventure) %></td>
         <td><%= link_to 'Delete', adventure, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
@@ -28,4 +27,4 @@
 
 <br>
 
-<%= link_to 'New Adventure', new_adventure_path, class: 'adventure-link' %>
+<%= link_to 'Add Adventure', new_adventure_path, class: 'adventure-link' %>
