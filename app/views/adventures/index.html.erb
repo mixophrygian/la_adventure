@@ -1,14 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Adventures</h1>
+<h1 class="title">L.A. Adventures</h1>
 
 <table>
   <thead>
     <tr>
       <th>Name</th>
       <th>Description</th>
-      <th>Picture</th>
-      <th>Visit</th>
+      <th>Added</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,12 +16,11 @@
     <% @adventures.each do |adventure| %>
       <tr>
         <td><%= adventure.name %></td>
-        <td><%= adventure.description %></td>
-        <td><%= adventure.picture %></td>
+        <td><%= truncate(adventure.description, length: 40) %></td>
         <td><%= adventure.visit %></td>
-        <td><%= link_to 'Show', adventure %></td>
+        <td><%= link_to 'See More', adventure %></td>
         <td><%= link_to 'Edit', edit_adventure_path(adventure) %></td>
-        <td><%= link_to 'Destroy', adventure, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Delete', adventure, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Adventure', new_adventure_path %>
+<%= link_to 'New Adventure', new_adventure_path, class: 'adventure-link' %>
